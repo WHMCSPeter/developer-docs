@@ -14,6 +14,9 @@ the variables available in `$params`.
 ```
 function registrarmodule_ClientArea($params)
 {
+    // Perform an API function call for any information
+    // you wish to display here.
+
     $output = <<<HTML
 <div class="alert alert-info">
     Your domain name is registered to {$params['fullname']}.
