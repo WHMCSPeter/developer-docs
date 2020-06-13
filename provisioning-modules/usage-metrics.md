@@ -12,7 +12,7 @@ Usage metrics give Services information about resource consumption and Products
 the ability to price those resources.
 
 Please make sure to read the feature documentation for 
-(Usage Billing)[https://docs.whmcs.com/Usage_Billing] so that you have the best
+[Usage Billing](https://docs.whmcs.com/Usage_Billing) so that you have the best
 understanding of how your module is expected to interact with WHMCS.
 
 ## MetricProvider Function
@@ -25,10 +25,17 @@ Interface and class are documented in the WHMCS\UsageBilling namespace at https:
 
 The following illustrates how one might make a simple class that fulfills the interface
 ```
+namespace WHMCS\Module\Server\Mymodule;
+/**
+ * The above namespace is automatically registered for autoloading classes within
+ * a "lib" sub-directory relative to your module directory. So, place this class 
+ * in modules/servers/mymodule/lib/MyMtricsProvider.php. 
+ */
+
 use WHMCS\UsageBilling\Contracts\Metrics\MetricInterface;
-use WHMCS\UsageBilling\Contracts\Metrics\ProviderInterface
+use WHMCS\UsageBilling\Contracts\Metrics\ProviderInterface;
 use WHMCS\UsageBilling\Metrics\Metric;
-use WHMCS\UsageBilling\Metrics\Units\WholeNumber;
+use WHMCS\UsageBilling\Metrics\Units\Accounts;
 use WHMCS\UsageBilling\Metrics\Usage;
 
 class MyMetricsProvider implements ProviderInterface
@@ -62,7 +69,7 @@ class MyMetricsProvider implements ProviderInterface
                 'emailaddr',
                 'Email Mailboxes',
                 MetricInterface::TYPE_SNAPSHOT,
-                new Accounts('Mailboxes'),
+                new Accounts('Mailboxes')
             ),
         ];
     }
@@ -120,6 +127,8 @@ must always return a valid list for all potential servers that use the module.
 ### Example MetricProvider Function <a id="example-function"></a>
 
 ```
+use WHMCS\Module\Server\MyModule\MyMetricsProvider;
+
 function mymodule_MetricProvider($params) {
 
     return new MyMetricProvider($params);
@@ -151,9 +160,11 @@ uninvoiced usage for those periods will be summed and calculations applied to
 that total.
   
 ### Metric Units
-Several unit objects are readily available in the \WHMCS\UsageBilling\Metrics\Units
-namespace.  You can extend the WholeNumber or the FloatPoint class if you have
-need for repeated use of a custom unit.
+Several unit classes are readily available in the \WHMCS\UsageBilling\Metrics\Units
+namespace.  These include Bytes, MegaBytes, GigaBytes, Accounts, and Domains.  These
+extend one of the two base concrete classes, WholeNumber or FloatingPoint. You can use
+those directly or extend them with your own concrete definition if you have need
+for repeated use of a custom unit.
 
 ## Usage
 Metrics should describe usage by providing an object that implements

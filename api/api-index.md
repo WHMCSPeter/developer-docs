@@ -62,10 +62,13 @@ weight = 100
 <li> <a href="/api-reference/addclientnote/">AddClientNote</a>
 <li> <a href="/api-reference/addticketnote/">AddTicketNote</a>
 <li> <a href="/api-reference/addticketreply/">AddTicketReply</a>
+<li> <a href="/api-reference/blockticketsender/">BlockTicketSender</a>
 <li> <a href="/api-reference/deleteannouncement/">DeleteAnnouncement</a>
 <li> <a href="/api-reference/deleteticket/">DeleteTicket</a>
 <li> <a href="/api-reference/deleteticketnote/">DeleteTicketNote</a>
+<li> <a href="/api-reference/deleteticketreply/">DeleteTicketReply</a>
 <li> <a href="/api-reference/getannouncements/">GetAnnouncements</a>
+<li> <a href="/api-reference/mergeticket/">MergeTicket</a>
 <li> <a href="/api-reference/openticket/">OpenTicket</a>
 <li> <a href="/api-reference/updateticket/">UpdateTicket</a>
 <li> <a href="/api-reference/updateticketreply/">UpdateTicketReply</a>
@@ -142,6 +145,7 @@ weight = 100
 <h3>Authentication</h3>
 
 <ul><li> <a href="/api-reference/createoauthcredential/">CreateOAuthCredential</a>
+<li> <a href="/api-reference/createssotoken/">CreateSsoToken</a>
 <li> <a href="/api-reference/deleteoauthcredential/">DeleteOAuthCredential</a>
 <li> <a href="/api-reference/listoauthcredentials/">ListOAuthCredentials</a>
 <li> <a href="/api-reference/updateoauthcredential/">UpdateOAuthCredential</a>
@@ -149,7 +153,8 @@ weight = 100
 </ul>
 <h3>Domains</h3>
 
-<ul><li> <a href="/api-reference/domaingetlockingstatus/">DomainGetLockingStatus</a>
+<ul><li> <a href="/api-reference/createorupdatetld/">CreateOrUpdateTLD</a>
+<li> <a href="/api-reference/domaingetlockingstatus/">DomainGetLockingStatus</a>
 <li> <a href="/api-reference/domaingetnameservers/">DomainGetNameservers</a>
 <li> <a href="/api-reference/domaingetwhoisinfo/">DomainGetWhoisInfo</a>
 <li> <a href="/api-reference/domainregister/">DomainRegister</a>
@@ -175,6 +180,7 @@ weight = 100
 <ul><li> <a href="/api-reference/getsupportdepartments/">GetSupportDepartments</a>
 <li> <a href="/api-reference/getsupportstatuses/">GetSupportStatuses</a>
 <li> <a href="/api-reference/getticket/">GetTicket</a>
+<li> <a href="/api-reference/getticketattachment/">GetTicketAttachment</a>
 <li> <a href="/api-reference/getticketcounts/">GetTicketCounts</a>
 <li> <a href="/api-reference/getticketnotes/">GetTicketNotes</a>
 <li> <a href="/api-reference/getticketpredefinedcats/">GetTicketPredefinedCats</a>

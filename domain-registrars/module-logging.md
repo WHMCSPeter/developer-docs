@@ -2,7 +2,7 @@
 prev = "/domain-registrars/hooks/"
 next = "/domain-registrars/client-area-output/"
 title = "Module Logging"
-weight = 90
+weight = 140
 
 +++
 
